@@ -25,6 +25,7 @@ typedef struct ELE {
 /* Queue structure */
 typedef struct {
     list_ele_t *head; /* Linked list of elements */
+    list_ele_t *tail;
     int size;
     /* TODO: Remove the above comment when you are about to implement. */
 } queue_t;

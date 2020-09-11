@@ -13,7 +13,8 @@ queue_t *q_new()
 {
     queue_t *q = malloc(sizeof(queue_t));
     /* TODO: What if malloc returned NULL? */
-    q->head = NULL;
+    if (q)
+        q->head = NULL;
     return q;
 }
 
@@ -56,6 +57,7 @@ bool q_insert_tail(queue_t *q, char *s)
     /* TODO: You need to write the complete code for this function */
     /* Remember: It should operate in O(1) time */
     /* TODO: Remove the above comment when you are about to implement. */
+
     return false;
 }
 

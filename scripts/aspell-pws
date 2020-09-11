@@ -128,3 +128,4 @@ signal
 srand
 sscanf
 macOS
+malloc
