@@ -183,6 +183,8 @@ void MergeSort(queue_t *left, queue_t *right, queue_t *q)
         }
         indirect = &(*indirect)->next;
     }
+    q->tail =
+        (list_ele_t *) ((char *) indirect - (long) &((list_ele_t *) 0)->next);
 }
 void q_sort(queue_t *q)
 {
