@@ -33,6 +33,7 @@
 
 #include "console.h"
 #include "report.h"
+#include "strnatcmp.h"
 
 /* Settable parameters */
 
@@ -558,7 +559,7 @@ bool do_sort(int argc, char *argv[])
         for (list_ele_t *e = q->head; e && --cnt; e = e->next) {
             /* Ensure each element in ascending order */
             /* FIXME: add an option to specify sorting order */
-            if (strcasecmp(e->value, e->next->value) > 0) {
+            if (strnatcasecmp(e->value, e->next->value) > 0) {
                 report(1, "ERROR: Not sorted in ascending order");
                 ok = false;
                 break;

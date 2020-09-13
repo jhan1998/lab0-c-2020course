@@ -10,6 +10,8 @@
 
 #include <stdbool.h>
 #include <stddef.h>
+#include "strnatcmp.h"
+#define LESS_THAN(a, b) strnatcasecmp(a, b) < 0
 
 /* Data structure declarations */
 
@@ -88,10 +90,11 @@ int q_size(queue_t *q);
 void q_reverse(queue_t *q);
 
 /*
- * Sort elements of queue in ascending order
+ *Sort elements of queue in ascending order
  * No effect if q is NULL or empty. In addition, if q has only one
  * element, do nothing.
  */
+void MergeSort(queue_t *left, queue_t *right, queue_t *q);
 void q_sort(queue_t *q);
 
 #endif /* LAB0_QUEUE_H */
